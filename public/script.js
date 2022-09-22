@@ -34,8 +34,8 @@ navigator.mediaDevices.getUserMedia({
         connecToNewUser(userId, stream);
     })
 
-    let text = $('input');
-    $('html').keydown((e) => {
+    let text = jQuery('input');
+    jQuery('html').keydown((e) => {
         if (e.which == 13 && text.val().length !== 0) {
             console.log("send message" + text.val());
             socket.emit('message', text.val());
@@ -44,7 +44,7 @@ navigator.mediaDevices.getUserMedia({
 
     })
     socket.on('createMessage', message => {
-        $('ul').append(`<li clas="message"> <b>user </b> <br/> ${message} </li>`);
+        jQuery('ul').append(`<li clas="message"> <b>user </b> <br/> jQuery{message} </li>`);
         scrollToBottom();
     })
 
@@ -73,7 +73,7 @@ const addVideoStream = (video, stream) => {
 }
 
 const scrollToBottom = () => {
-    let d = $('.main__chat_window');
+    let d = jQuery('.main__chat_window');
     d.scrollTop(d.prop('scrollHeight'));
 }
 //Mute our video
