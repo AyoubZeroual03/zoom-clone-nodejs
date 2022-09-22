@@ -32,8 +32,11 @@ video{
     flex-grow:1;
     background: black;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px;
 }
 .main__contorls{
     display: flex;
